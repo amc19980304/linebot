@@ -30,7 +30,7 @@ foreach ($client->parseEvents() as $event) {
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-                	$m_message = ';
+                	$m_message = 'fuck you mother';
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(

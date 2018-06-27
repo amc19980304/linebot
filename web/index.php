@@ -16,10 +16,6 @@ foreach ($client->parseEvents() as $event) {
                                 'replyToken' => $event['replyToken'],
                                 'messages' => array(
                                     array(
-                                        'type' => 'text',
-                                        'text' => $m_message
-                                    ),
-                                    array(
                                         'type' => 'image',
                                         'originalContentUrl' => 'https://github.com/amc19980304/linebot/blob/master/menu.jpg：',
                                         'previewImageUrl' => 'https://github.com/amc19980304/linebot/blob/master/menu.jpg'

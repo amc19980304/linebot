@@ -117,7 +117,7 @@ foreach ($client->parseEvents() as $event) {
                                     'altText' => 'Example buttons template', // 替代文字
                                     'template' => array(
                                         'type' => 'buttons', // 類型 (按鈕)
-                                        'thumbnailImageUrl' => 'https://raw.githubusercontent.com/amc19980304/linebot/master/chicken%20(3).jpg', // 圖片網址 <不一定需要>
+                                        'thumbnailImageUrl' => 'https://raw.githubusercontent.com/amc19980304/linebot/master/chicken%20(1).jpg', // 圖片網址 <不一定需要>
                                         'title' => '加加鹹酥雞', // 標題 <不一定需要>
                                         'text' => '地址:屏東縣長治鄉長興路9號-------加盟電話:0987251920', // 文字
                                         'actions' => array(

@@ -17,7 +17,7 @@ foreach ($client->parseEvents() as $event) {
                                 'messages' => array(
                                     array(
                                         'type' => 'text',
-                                        'text' => 'linebot/menu.jpg',
+                                        'originalContentUrl' => 'linebot/menu.jpg',
                                         'previewImageUrl' => 'linebot/menu.jpg'
                                     )
                                 )

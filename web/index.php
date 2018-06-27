@@ -38,7 +38,7 @@ foreach ($client->parseEvents() as $event) {
                         if($m_message=="產品寫真")
                 	{
                             $number = rand(1,6);
-                            $url="https://raw.githubusercontent.com/amc19980304/linebot/master/chicken(".$number.").jpg";
+                            $url="https://raw.githubusercontent.com/amc19980304/linebot/master/chicken (".$number.").jpg";
                             $client->replyMessage(array(
                                 'replyToken' => $event['replyToken'],
                                 'messages' => array(

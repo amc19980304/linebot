@@ -41,6 +41,10 @@ foreach ($client->parseEvents() as $event) {
                                 'text' => $m_message
                             )
                         )
+                            'template' => array(
+                            'type' => 'carousel',
+                            'columns' => '3',
+                            ),
                     	));
                 	}
                     break; 

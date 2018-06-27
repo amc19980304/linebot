@@ -72,19 +72,9 @@ foreach ($client->parseEvents() as $event) {
                                                 'text' => '炸台工作人員', // 文字 1
                                                 'actions' => array(
                                                     array(
-                                                        'type' => 'postback', // 類型 (回傳)
-                                                        'label' => 'postback 1', // 標籤 1
-                                                        'data' => 'action=buy&itemid=123' // 資料
-                                                    ),
-                                                    array(
-                                                        'type' => 'message', // 類型 (訊息)
-                                                        'label' => 'Message example 1', // 標籤 2
-                                                        'text' => 'Message example 1' // 用戶發送文字
-                                                    ),
-                                                    array(
                                                         'type' => 'uri', // 類型 (連結)
-                                                        'label' => 'Uri example 1', // 標籤 3
-                                                        'uri' => 'https://github.com/GoneTone/line-example-bot-php' // 連結網址
+                                                        'label' => 'FB', // 標籤 3
+                                                        'uri' => 'facebook.com/amc19980304' // 連結網址
                                                     )
                                                 )
                                             ),
@@ -94,19 +84,21 @@ foreach ($client->parseEvents() as $event) {
                                                 'text' => '前台服務人員', // 文字 2
                                                 'actions' => array(
                                                     array(
-                                                        'type' => 'postback', // 類型 (回傳)
-                                                        'label' => 'postback 2', // 標籤 1
-                                                        'data' => 'action=buy&itemid=123' // 資料
-                                                    ),
-                                                    array(
-                                                        'type' => 'message', // 類型 (訊息)
-                                                        'label' => 'Message example 2', // 標籤 2
-                                                        'text' => 'Message example 2' // 用戶發送文字
-                                                    ),
+                                                        'type' => 'uri', // 類型 (連結)
+                                                        'label' => 'FB', // 標籤 3
+                                                        'uri' => 'facebook.com/amc19980304' // 連結網址
+                                                    )
+                                                )
+                                            ),
+                                            array(
+                                                'thumbnailImageUrl' => 'https://raw.githubusercontent.com/amc19980304/linebot/master/oldwoman.jpg', // 圖片網址 <不一定需要>
+                                                'title' => '美魔女阿婆', // 標題 2 <不一定需要>
+                                                'text' => '備料工作人員', // 文字 2
+                                                'actions' => array(
                                                     array(
                                                         'type' => 'uri', // 類型 (連結)
-                                                        'label' => 'Uri example 2', // 標籤 3
-                                                        'uri' => 'https://github.com/GoneTone/line-example-bot-php' // 連結網址
+                                                        'label' => 'FB', // 標籤 3
+                                                        'uri' => 'facebook.com/amc19980304' // 連結網址
                                                     )
                                                 )
                                             )

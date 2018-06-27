@@ -74,7 +74,7 @@ foreach ($client->parseEvents() as $event) {
                                                     array(
                                                         'type' => 'uri', // 類型 (連結)
                                                         'label' => 'FB', // 標籤 3
-                                                        'uri' => 'facebook.com/amc19980304' // 連結網址
+                                                        'uri' => 'https://www.facebook.com/amc19980304' // 連結網址
                                                     )
                                                 )
                                             ),
@@ -86,7 +86,7 @@ foreach ($client->parseEvents() as $event) {
                                                     array(
                                                         'type' => 'uri', // 類型 (連結)
                                                         'label' => 'FB', // 標籤 3
-                                                        'uri' => 'facebook.com/amc19980304' // 連結網址
+                                                        'uri' => 'https://www.facebook.com/amc19980304' // 連結網址
                                                     )
                                                 )
                                             ),
@@ -98,7 +98,7 @@ foreach ($client->parseEvents() as $event) {
                                                     array(
                                                         'type' => 'uri', // 類型 (連結)
                                                         'label' => 'FB', // 標籤 3
-                                                        'uri' => 'facebook.com/amc19980304' // 連結網址
+                                                        'uri' => 'https://www.facebook.com/amc19980304' // 連結網址
                                                     )
                                                 )
                                             )

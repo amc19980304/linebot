@@ -23,7 +23,7 @@ foreach ($client->parseEvents() as $event) {
                                 )
                             ));
                 	}
-                        if($m_message=="近期優惠")
+                        else if($m_message=="近期優惠")
                 	{
                             $client->replyMessage(array(
                                 'replyToken' => $event['replyToken'],
@@ -40,7 +40,7 @@ foreach ($client->parseEvents() as $event) {
                                 )
                             ));
                 	}
-                        if($m_message=="產品寫真")
+                        else if($m_message=="來一張產品寫真")
                 	{
                             $number = rand(1,6);
                             $url="https://raw.githubusercontent.com/amc19980304/linebot/master/chicken%20(".$number.").jpg";
@@ -55,7 +55,7 @@ foreach ($client->parseEvents() as $event) {
                                 )
                             ));
                 	}
-                        if($m_message=="服務人員介紹")
+                        else if($m_message=="服務人員介紹")
                 	{
                             $client->replyMessage(array(
                             'replyToken' => $event['replyToken'],
@@ -104,6 +104,46 @@ foreach ($client->parseEvents() as $event) {
                                             )
                                         )
                                     )
+                                )
+                            )
+                        ));
+                    }
+                    else if($m_message=="店家資訊"){
+                        $client->replyMessage(array(
+                            'replyToken' => $event['replyToken'],
+                            'messages' => array(
+                                array(
+                                    'type' => 'template', // 訊息類型 (模板)
+                                    'altText' => 'Example buttons template', // 替代文字
+                                    'template' => array(
+                                        'type' => 'buttons', // 類型 (按鈕)
+                                        'thumbnailImageUrl' => 'https://api.reh.tw/line/bot/example/assets/images/example.jpg', // 圖片網址 <不一定需要>
+                                        'title' => '加加鹹酥雞', // 標題 <不一定需要>
+                                        'text' => '地址:屏東縣長治鄉長興路9號\r\n加盟電話:0987251920', // 文字
+                                        'actions' => array(
+                                            array(
+                                                'type' => 'uri', // 類型 (連結)
+                                                'label' => 'Uri example', // 標籤 3
+                                                'uri' => 'https://github.com/GoneTone/line-example-bot-php' // 連結網址
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        ));
+                    }
+                    else{
+                        $client->replyMessage(array(
+                            'replyToken' => $event['replyToken'],
+                            'messages' => array(
+                                array(
+                                    'type' => 'sticker',
+                                    'packageId' => 2, // 貼圖包 ID
+                                    'stickerId' => 38 // 貼圖 ID
+                                ),
+                                array(
+                                    'type' => 'text',
+                                    'text' => '不好意思,我聽不懂你的話呢'
                                 )
                             )
                         ));

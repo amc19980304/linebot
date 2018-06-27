@@ -17,8 +17,8 @@ foreach ($client->parseEvents() as $event) {
                                 'messages' => array(
                                     array(
                                         'type' => 'text',
-                                        'originalContentUrl' => 'linebot/menu.jpg',
-                                        'previewImageUrl' => 'linebot/menu.jpg'
+                                        'originalContentUrl' => 'https://raw.githubusercontent.com/amc19980304/linebot/master/menu.jpg',
+                                        'previewImageUrl' => 'https://raw.githubusercontent.com/amc19980304/linebot/master/menu.jpg'
                                     )
                                 )
                             ));

@@ -10,7 +10,7 @@ foreach ($client->parseEvents() as $event) {
             switch ($message['type']) {
                 case 'text':
                 	$m_message = $message['text'];
-                	if($m_message!="")
+                	if($m_message=="美味菜單")
                 	{
                             $client->replyMessage(array(
                                 'replyToken' => $event['replyToken'],
@@ -19,6 +19,18 @@ foreach ($client->parseEvents() as $event) {
                                         'type' => 'image',
                                         'originalContentUrl' => 'https://raw.githubusercontent.com/amc19980304/linebot/master/menu1.jpg',
                                         'previewImageUrl' => 'https://raw.githubusercontent.com/amc19980304/linebot/master/menu1.jpg'
+                                    )
+                                )
+                            ));
+                	}
+                        if($m_message=="近期優惠")
+                	{
+                            $client->replyMessage(array(
+                                'replyToken' => $event['replyToken'],
+                                'messages' => array(
+                                    array(
+                                        'type' => 'text',
+                                        'text' => '不好意思,目前還沒有優惠活動呦'
                                     )
                                 )
                             ));

@@ -4,15 +4,6 @@ $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 foreach ($client->parseEvents() as $event) {
-    $client->replyMessage(array(
-        'replyToken' => $event['replyToken'],
-        'messages' => array(
-            array(
-                'type' => 'text',
-                'text' => $event['type'].'and'.$message['type']
-            )
-        )
-    ));
     switch ($event['type']) {
         case 'message':
             $message = $event['message'];
@@ -39,8 +30,8 @@ foreach ($client->parseEvents() as $event) {
                                 'messages' => array(
                                     array(
                                         'type' => 'sticker',
-                                        'packageId' => 38, // 貼圖包 ID
-                                        'stickerId' => 2 // 貼圖 ID
+                                        'packageId' => 2, // 貼圖包 ID
+                                        'stickerId' => 38 // 貼圖 ID
                                     ),
                                     array(
                                         'type' => 'text',
@@ -124,8 +115,8 @@ foreach ($client->parseEvents() as $event) {
                         'messages' => array(
                             array(
                                 'type' => 'sticker',
-                                'packageId' => 36, // 貼圖包 ID
-                                'stickerId' => 2 // 貼圖 ID
+                                'packageId' => 2, // 貼圖包 ID
+                                'stickerId' => 36 // 貼圖 ID
                             )
                         )
                     ));

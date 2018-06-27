@@ -29,8 +29,13 @@ foreach ($client->parseEvents() as $event) {
                                 'replyToken' => $event['replyToken'],
                                 'messages' => array(
                                     array(
+                                        'type' => 'sticker',
+                                        'packageId' => 38, // 貼圖包 ID
+                                        'stickerId' => 2 // 貼圖 ID
+                                    ),
+                                    array(
                                         'type' => 'text',
-                                        'text' => '不好意思,目前還沒有優惠活動呦'
+                                        'text' => '不好意思,目前還沒有優惠活動呦'                                        
                                     )
                                 )
                             ));
@@ -50,8 +55,80 @@ foreach ($client->parseEvents() as $event) {
                                 )
                             ));
                 	}
+                        if($m_message=="服務人員介紹")
+                	{
+                            $client->replyMessage(array(
+                            'replyToken' => $event['replyToken'],
+                            'messages' => array(
+                                array(
+                                    'type' => 'template', // 訊息類型 (模板)
+                                    'altText' => 'Example buttons template', // 替代文字
+                                    'template' => array(
+                                        'type' => 'carousel', // 類型 (旋轉木馬)
+                                        'columns' => array(
+                                            array(
+                                                'thumbnailImageUrl' => 'https://raw.githubusercontent.com/amc19980304/linebot/master/man.jpg', // 圖片網址 <不一定需要>
+                                                'title' => '小麥', // 標題 1 <不一定需要>
+                                                'text' => '炸台工作人員', // 文字 1
+                                                'actions' => array(
+                                                    array(
+                                                        'type' => 'postback', // 類型 (回傳)
+                                                        'label' => 'postback 1', // 標籤 1
+                                                        'data' => 'action=buy&itemid=123' // 資料
+                                                    ),
+                                                    array(
+                                                        'type' => 'message', // 類型 (訊息)
+                                                        'label' => 'Message example 1', // 標籤 2
+                                                        'text' => 'Message example 1' // 用戶發送文字
+                                                    ),
+                                                    array(
+                                                        'type' => 'uri', // 類型 (連結)
+                                                        'label' => 'Uri example 1', // 標籤 3
+                                                        'uri' => 'https://github.com/GoneTone/line-example-bot-php' // 連結網址
+                                                    )
+                                                )
+                                            ),
+                                            array(
+                                                'thumbnailImageUrl' => 'https://raw.githubusercontent.com/amc19980304/linebot/master/woman.jpg', // 圖片網址 <不一定需要>
+                                                'title' => '美麗人妻', // 標題 2 <不一定需要>
+                                                'text' => '前台服務人員', // 文字 2
+                                                'actions' => array(
+                                                    array(
+                                                        'type' => 'postback', // 類型 (回傳)
+                                                        'label' => 'postback 2', // 標籤 1
+                                                        'data' => 'action=buy&itemid=123' // 資料
+                                                    ),
+                                                    array(
+                                                        'type' => 'message', // 類型 (訊息)
+                                                        'label' => 'Message example 2', // 標籤 2
+                                                        'text' => 'Message example 2' // 用戶發送文字
+                                                    ),
+                                                    array(
+                                                        'type' => 'uri', // 類型 (連結)
+                                                        'label' => 'Uri example 2', // 標籤 3
+                                                        'uri' => 'https://github.com/GoneTone/line-example-bot-php' // 連結網址
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        ));
+                    }
                     break; 
-                
+                case 'sticker':
+                    $client->replyMessage(array(
+                        'replyToken' => $event['replyToken'],
+                        'messages' => array(
+                            array(
+                                'type' => 'sticker',
+                                'packageId' => 36, // 貼圖包 ID
+                                'stickerId' => 2 // 貼圖 ID
+                            )
+                        )
+                    ));
+                    break;
             }
             break;
         default:

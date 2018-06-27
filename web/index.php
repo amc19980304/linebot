@@ -119,7 +119,7 @@ foreach ($client->parseEvents() as $event) {
                                         'type' => 'buttons', // 類型 (按鈕)
                                         'thumbnailImageUrl' => 'https://api.reh.tw/line/bot/example/assets/images/example.jpg', // 圖片網址 <不一定需要>
                                         'title' => '加加鹹酥雞', // 標題 <不一定需要>
-                                        'text' => '地址:屏東縣長治鄉長興路9號------加盟電話:0987251920', // 文字
+                                        'text' => '地址:屏東縣長治鄉長興路9號-------加盟電話:0987251920', // 文字
                                         'actions' => array(
                                             array(
                                                 'type' => 'uri', // 類型 (連結)
@@ -133,28 +133,6 @@ foreach ($client->parseEvents() as $event) {
                         ));
                     }
                     else if($m_message=="訂餐"){
-                        $client->replyMessage(array(
-                            'replyToken' => $event['replyToken'],
-                            'messages' => array(
-                                array(
-                                    'type' => 'template', // 訊息類型 (模板)
-                                    'altText' => 'Example buttons template', // 替代文字
-                                    'template' => array(
-                                        'type' => 'buttons', // 類型 (按鈕)
-                                        'thumbnailImageUrl' => 'https://api.reh.tw/line/bot/example/assets/images/example.jpg', // 圖片網址 <不一定需要>
-                                        'title' => '加加鹹酥雞', // 標題 <不一定需要>
-                                        'text' => '地址:屏東縣長治鄉長興路9號-------加盟電話:0987251920', // 文字
-                                        'actions' => array(
-                                            array(
-                                                'type' => 'uri', // 類型 (連結)
-                                                'label' => '店家網頁', // 標籤 3
-                                                'uri' => 'https://goo.gl/maps/LpTL6e1PDvr' // 連結網址
-                                            )
-                                        )
-                                    )
-                                )
-                            )
-                        ));
                     }
                     else{
                         $client->replyMessage(array(

@@ -169,7 +169,7 @@ foreach ($client->parseEvents() as $event) {
                                                 'type' => 'postback', // 類型 (回傳)
                                                 'label' => '送出訂單', // 標籤 1
                                                 'data' => 'type=submit' // 資料
-                                            ),
+                                            )
                                         )
                                     )
                                 )

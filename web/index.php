@@ -4,6 +4,15 @@ $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 foreach ($client->parseEvents() as $event) {
+    $client->replyMessage(array(
+        'replyToken' => $event['replyToken'],
+        'messages' => array(
+            array(
+                'type' => 'text',
+                'text' => $event['type']
+            )
+        )
+    ));
     switch ($event['type']) {
         case 'message':
             $message = $event['message'];
@@ -133,6 +142,48 @@ foreach ($client->parseEvents() as $event) {
                         ));
                     }
                     else if($m_message=="訂餐"){
+                        $client->replyMessage(array(
+                            'replyToken' => $event['replyToken'],
+                            'messages' => array(
+                                array(
+                                    'type' => 'template', // 訊息類型 (模板)
+                                    'altText' => '訂餐服務唷', // 替代文字
+                                    'template' => array(
+                                        'type' => 'buttons', // 類型 (按鈕)
+                                        'thumbnailImageUrl' => 'https://raw.githubusercontent.com/amc19980304/linebot/master/store.jpg', // 圖片網址 <不一定需要>
+                                        'title' => '訂餐服務', // 標題 <不一定需要>
+                                        'text' => '請點擊以下欄位以便輸入資料', // 文字
+                                        'actions' => array(
+                                            array(
+                                                'type' => 'postback', // 類型 (回傳)
+                                                'label' => '姓名', // 標籤 1
+                                                'data' => 'type=name' // 資料
+                                            ),
+                                            array(
+                                                'type' => 'postback', // 類型 (回傳)
+                                                'label' => '電話', // 標籤 1
+                                                'data' => 'type=phone' // 資料
+                                            ),
+                                            array(
+                                                'type' => 'postback', // 類型 (回傳)
+                                                'label' => '地址', // 標籤 1
+                                                'data' => 'type=address' // 資料
+                                            ),
+                                            array(
+                                                'type' => 'postback', // 類型 (回傳)
+                                                'label' => '訂餐內容', // 標籤 1
+                                                'data' => 'type=content' // 資料
+                                            ),
+                                            array(
+                                                'type' => 'postback', // 類型 (回傳)
+                                                'label' => '送出訂單', // 標籤 1
+                                                'data' => 'type=submit' // 資料
+                                            ),
+                                        )
+                                    )
+                                )
+                            )
+                        ));
                     }
                     else{
                         $client->replyMessage(array(

@@ -133,6 +133,15 @@ foreach ($client->parseEvents() as $event) {
                         ));
                     }
                     else if($m_message=="訂餐"){
+                        $client->replyMessage(array(
+                            'replyToken' => $event['replyToken'],
+                            'messages' => array(
+                                array(
+                                    'type' => event['replyToken'],
+                                    'text' => '不好意思,我聽不懂你的話呢'
+                                )
+                            )
+                        ));
                     }
                     else{
                         $client->replyMessage(array(

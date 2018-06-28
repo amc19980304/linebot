@@ -144,13 +144,23 @@ foreach ($client->parseEvents() as $event) {
                                         'columns' => array(
                                             array(
                                                 'thumbnailImageUrl' => 'https://raw.githubusercontent.com/amc19980304/linebot/master/store.jpg', // 圖片網址 <不一定需要>
-                                                'title' => '訂餐服務1', // 標題 1 <不一定需要>
+                                                'title' => '訂餐服務', // 標題 1 <不一定需要>
                                                 'text' => '請點擊以下欄位以便輸入資料', // 文字 1
                                                 'actions' => array(
                                                     array(
                                                         'type' => 'postback', // 類型 (連結)
                                                         'label' => '姓名', // 標籤 3
                                                         'data' => 'type=name' // 連結網址
+                                                    ),
+                                                    array(
+                                                        'type' => 'postback', // 類型 (連結)
+                                                        'label' => '電話', // 標籤 3
+                                                        'data' => 'type=phone' // 連結網址
+                                                    ),
+                                                    array(
+                                                        'type' => 'postback', // 類型 (連結)
+                                                        'label' => '地址', // 標籤 3
+                                                        'data' => 'type=address' // 連結網址
                                                     )
                                                 )
                                             ),

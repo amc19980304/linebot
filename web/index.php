@@ -168,18 +168,6 @@ foreach ($client->parseEvents() as $event) {
                                                         'data' => 'type=content' // 連結網址
                                                     )
                                                 )
-                                            ),
-                                            array(
-                                                'thumbnailImageUrl' => 'https://raw.githubusercontent.com/amc19980304/linebot/master/store.jpg', // 圖片網址 <不一定需要>
-                                                'title' => '訂餐服務', // 標題 2 <不一定需要>
-                                                'text' => '點擊送出訂單', // 文字 2
-                                                'actions' => array(
-                                                    array(
-                                                        'type' => 'postback', // 類型 (連結)
-                                                        'label' => '送出訂單', // 標籤 3
-                                                        'data' => 'type=submit' // 連結網址
-                                                    )
-                                                )
                                             )
                                         )
                                     )

@@ -148,9 +148,24 @@ foreach ($client->parseEvents() as $event) {
                                                 'text' => '請點擊以下欄位以便輸入資料', // 文字 1
                                                 'actions' => array(
                                                     array(
-                                                        'type' => 'uri', // 類型 (連結)
-                                                        'label' => 'FB', // 標籤 3
-                                                        'uri' => 'https://www.facebook.com/amc19980304' // 連結網址
+                                                        'type' => 'postback', // 類型 (連結)
+                                                        'label' => '姓名', // 標籤 3
+                                                        'data' => 'type=name' // 連結網址
+                                                    ),
+                                                    array(
+                                                        'type' => 'postback', // 類型 (連結)
+                                                        'label' => '電話', // 標籤 3
+                                                        'data' => 'type=phone' // 連結網址
+                                                    ),
+                                                    array(
+                                                        'type' => 'postback', // 類型 (連結)
+                                                        'label' => '地址', // 標籤 3
+                                                        'data' => 'type=address' // 連結網址
+                                                    ),
+                                                    array(
+                                                        'type' => 'postback', // 類型 (連結)
+                                                        'label' => '訂餐內容', // 標籤 3
+                                                        'data' => 'type=content' // 連結網址
                                                     )
                                                 )
                                             ),
@@ -160,9 +175,9 @@ foreach ($client->parseEvents() as $event) {
                                                 'text' => '點擊送出訂單', // 文字 2
                                                 'actions' => array(
                                                     array(
-                                                        'type' => 'uri', // 類型 (連結)
-                                                        'label' => 'FB', // 標籤 3
-                                                        'uri' => 'https://www.facebook.com/amc19980304' // 連結網址
+                                                        'type' => 'postback', // 類型 (連結)
+                                                        'label' => '送出訂單', // 標籤 3
+                                                        'data' => 'type=submit' // 連結網址
                                                     )
                                                 )
                                             )

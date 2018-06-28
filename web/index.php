@@ -125,26 +125,6 @@ foreach ($client->parseEvents() as $event) {
                                                 'type' => 'uri', // 類型 (連結)
                                                 'label' => '店家網頁', // 標籤 3
                                                 'uri' => 'https://goo.gl/maps/LpTL6e1PDvr' // 連結網址
-                                            ),
-                                            array(
-                                                'type' => 'uri', // 類型 (連結)
-                                                'label' => '店家網頁', // 標籤 3
-                                                'uri' => 'https://goo.gl/maps/LpTL6e1PDvr' // 連結網址
-                                            ),
-                                            array(
-                                                'type' => 'uri', // 類型 (連結)
-                                                'label' => '店家網頁', // 標籤 3
-                                                'uri' => 'https://goo.gl/maps/LpTL6e1PDvr' // 連結網址
-                                            ),
-                                            array(
-                                                'type' => 'uri', // 類型 (連結)
-                                                'label' => '店家網頁', // 標籤 3
-                                                'uri' => 'https://goo.gl/maps/LpTL6e1PDvr' // 連結網址
-                                            ),
-                                            array(
-                                                'type' => 'uri', // 類型 (連結)
-                                                'label' => '店家網頁', // 標籤 3
-                                                'uri' => 'https://goo.gl/maps/LpTL6e1PDvr' // 連結網址
                                             )
                                         )
                                     )
@@ -176,6 +156,11 @@ foreach ($client->parseEvents() as $event) {
                                                         'type' => 'postback', // 類型 (連結)
                                                         'label' => '電話', // 標籤 3
                                                         'data' => 'type=phone' // 連結網址
+                                                    ),
+                                                    array(
+                                                        'type' => 'postback', // 類型 (連結)
+                                                        'label' => '送出訂單', // 標籤 3
+                                                        'data' => 'type=submit' // 連結網址
                                                     )
                                                 )
                                             ),
@@ -184,6 +169,16 @@ foreach ($client->parseEvents() as $event) {
                                                 'title' => '訂餐服務', // 標題 2 <不一定需要>
                                                 'text' => '點擊送出訂單', // 文字 2
                                                 'actions' => array(
+                                                    array(
+                                                        'type' => 'postback', // 類型 (連結)
+                                                        'label' => '送出訂單', // 標籤 3
+                                                        'data' => 'type=submit' // 連結網址
+                                                    ),
+                                                    array(
+                                                        'type' => 'postback', // 類型 (連結)
+                                                        'label' => '送出訂單', // 標籤 3
+                                                        'data' => 'type=submit' // 連結網址
+                                                    ),
                                                     array(
                                                         'type' => 'postback', // 類型 (連結)
                                                         'label' => '送出訂單', // 標籤 3

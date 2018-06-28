@@ -230,7 +230,8 @@ foreach ($client->parseEvents() as $event) {
                 case 'type=phone':$str='請輸入電話:';break;
                 case 'type=address':$str='請輸入地址:';break;
                 case 'type=content':$str='請輸入訂餐內容:';break;
-                case 'type=submit':$str='已送出訂單:';break;
+                case 'type=submit':$str='已送出訂單!';break;
+                case 'type=note':$str='請輸入備註:';break;
             }
             $client->replyMessage(array(
                 'replyToken' => $event['replyToken'],

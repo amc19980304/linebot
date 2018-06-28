@@ -138,32 +138,48 @@ foreach ($client->parseEvents() as $event) {
                             'messages' => array(
                                 array(
                                     'type' => 'template', // 訊息類型 (模板)
-                                    'altText' => '訂餐服務唷', // 替代文字
+                                    'altText' => '訂餐服務哦', // 替代文字
                                     'template' => array(
-                                        'type' => 'buttons', // 類型 (按鈕)
-                                        'thumbnailImageUrl' => 'https://raw.githubusercontent.com/amc19980304/linebot/master/store.jpg', // 圖片網址 <不一定需要>
-                                        'title' => '訂餐服務', // 標題 <不一定需要>
+                                        'type' => 'carousel', // 類型 (旋轉木馬)
+                                        'columns' => array(
+                                            array(
+                                                'thumbnailImageUrl' => 'https://raw.githubusercontent.com/amc19980304/linebot/master/store.jpg', // 圖片網址 <不一定需要>
+                                                'title' => '訂餐服務', // 標題 <不一定需要>
                                         'text' => '請點擊以下欄位以便輸入資料', // 文字
                                         'actions' => array(
-                                            array(
-                                                'type' => 'postback', // 類型 (回傳)
-                                                'label' => '姓名', // 標籤 1
-                                                'data' => 'type=name' // 資料
+                                                    array(
+                                                        'type' => 'postback', // 類型 (回傳)
+                                                        'label' => '姓名', // 標籤 1
+                                                        'data' => 'type=name' // 資料
+                                                    ),
+                                                    array(
+                                                        'type' => 'postback', // 類型 (回傳)
+                                                        'label' => '電話', // 標籤 1
+                                                        'data' => 'type=phone' // 資料
+                                                    ),
+                                                    array(
+                                                        'type' => 'postback', // 類型 (回傳)
+                                                        'label' => '地址', // 標籤 1
+                                                        'data' => 'type=address' // 資料
+                                                    ),
+                                                    array(
+                                                        'type' => 'postback', // 類型 (回傳)
+                                                        'label' => '訂餐內容', // 標籤 1
+                                                        'data' => 'type=content' // 資料
+                                                    )
+                                                )
                                             ),
                                             array(
-                                                'type' => 'postback', // 類型 (回傳)
-                                                'label' => '電話', // 標籤 1
-                                                'data' => 'type=phone' // 資料
-                                            ),
-                                            array(
-                                                'type' => 'postback', // 類型 (回傳)
-                                                'label' => '地址', // 標籤 1
-                                                'data' => 'type=address' // 資料
-                                            ),
-                                            array(
-                                                'type' => 'postback', // 類型 (回傳)
-                                                'label' => '訂餐內容', // 標籤 1
-                                                'data' => 'type=content' // 資料
+                                                'thumbnailImageUrl' => 'https://raw.githubusercontent.com/amc19980304/linebot/master/store.jpg', // 圖片網址 <不一定需要>
+                                                'title' => '訂餐服務', // 標題 2 <不一定需要>
+                                                'text' => '點擊送出訂單', // 文字 2
+                                                'actions' => array(
+                                                    array(
+                                                        'type' => 'postback', // 類型 (回傳)
+                                                        'label' => '送出訂單', // 標籤 1
+                                                        'data' => 'type=submit' // 資料
+                                                    )
+                                                )
                                             )
                                         )
                                     )
@@ -208,7 +224,8 @@ foreach ($client->parseEvents() as $event) {
                 case 'type=name':$str='請輸入姓名:';break;
                 case 'type=phone':$str='請輸入電話:';break;
                 case 'type=address':$str='請輸入地址:';break;
-                case 'type=content':$str='請輸入內容:';break;
+                case 'type=content':$str='請輸入訂餐內容:';break;
+                case 'type=submit':$str='已送出訂單:';break;
             }
             $client->replyMessage(array(
                 'replyToken' => $event['replyToken'],

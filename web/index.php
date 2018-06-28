@@ -138,29 +138,19 @@ foreach ($client->parseEvents() as $event) {
                             'messages' => array(
                                 array(
                                     'type' => 'template', // 訊息類型 (模板)
-                                    'altText' => '訂餐服務哦', // 替代文字
+                                    'altText' => '服務人員介紹', // 替代文字
                                     'template' => array(
                                         'type' => 'carousel', // 類型 (旋轉木馬)
                                         'columns' => array(
                                             array(
                                                 'thumbnailImageUrl' => 'https://raw.githubusercontent.com/amc19980304/linebot/master/store.jpg', // 圖片網址 <不一定需要>
-                                                'title' => '訂餐服務', // 標題 <不一定需要>
-                                        'text' => '請點擊以下欄位以便輸入資料', // 文字
-                                        'actions' => array(
+                                                'title' => '訂餐服務', // 標題 1 <不一定需要>
+                                                'text' => '請點擊以下欄位以便輸入資料', // 文字 1
+                                                'actions' => array(
                                                     array(
-                                                        'type' => 'postback', // 類型 (回傳)
-                                                        'label' => '姓名', // 標籤 1
-                                                        'data' => 'type=name' // 資料
-                                                    ),
-                                                    array(
-                                                        'type' => 'postback', // 類型 (回傳)
-                                                        'label' => '電話', // 標籤 1
-                                                        'data' => 'type=phone' // 資料
-                                                    ),
-                                                    array(
-                                                        'type' => 'postback', // 類型 (回傳)
-                                                        'label' => '地址', // 標籤 1
-                                                        'data' => 'type=address' // 資料
+                                                        'type' => 'uri', // 類型 (連結)
+                                                        'label' => 'FB', // 標籤 3
+                                                        'uri' => 'https://www.facebook.com/amc19980304' // 連結網址
                                                     )
                                                 )
                                             ),
@@ -170,9 +160,9 @@ foreach ($client->parseEvents() as $event) {
                                                 'text' => '點擊送出訂單', // 文字 2
                                                 'actions' => array(
                                                     array(
-                                                        'type' => 'postback', // 類型 (回傳)
-                                                        'label' => '送出訂單', // 標籤 1
-                                                        'data' => 'type=submit' // 資料
+                                                        'type' => 'uri', // 類型 (連結)
+                                                        'label' => 'FB', // 標籤 3
+                                                        'uri' => 'https://www.facebook.com/amc19980304' // 連結網址
                                                     )
                                                 )
                                             )

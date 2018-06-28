@@ -204,13 +204,18 @@ foreach ($client->parseEvents() as $event) {
             }
             break;
         case 'postback':
-            $str='';
+            switch ($event['postback']['data']){
+                case 'type=name':$str='請輸入姓名:';break;
+                case 'type=phone':$str='請輸入電話:';break;
+                case 'type=address':$str='請輸入地址:';break;
+                case 'type=content':$str='請輸入內容:';break;
+            }
             $client->replyMessage(array(
                 'replyToken' => $event['replyToken'],
                 'messages' => array(
                     array(
                         'type' => 'text',
-                        'text' => $event['postback']['data']
+                        'text' => $str
                     )
                 )
             ));

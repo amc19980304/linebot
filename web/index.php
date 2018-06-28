@@ -137,7 +137,7 @@ foreach ($client->parseEvents() as $event) {
                             'replyToken' => $event['replyToken'],
                             'messages' => array(
                                 array(
-                                    'type' => event['replyToken'],
+                                    'type' => $event['source']['userId'],
                                     'text' => '不好意思,我聽不懂你的話呢'
                                 )
                             )

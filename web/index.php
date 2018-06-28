@@ -156,11 +156,6 @@ foreach ($client->parseEvents() as $event) {
                                                         'type' => 'postback', // 類型 (連結)
                                                         'label' => '電話', // 標籤 3
                                                         'data' => 'type=phone' // 連結網址
-                                                    ),
-                                                    array(
-                                                        'type' => 'postback', // 類型 (連結)
-                                                        'label' => '地址', // 標籤 3
-                                                        'data' => 'type=address' // 連結網址
                                                     )
                                                 )
                                             ),

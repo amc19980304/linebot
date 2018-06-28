@@ -156,6 +156,11 @@ foreach ($client->parseEvents() as $event) {
                                                         'type' => 'postback', // 類型 (連結)
                                                         'label' => '電話', // 標籤 3
                                                         'data' => 'type=phone' // 連結網址
+                                                    ),
+                                                    array(
+                                                        'type' => 'postback', // 類型 (連結)
+                                                        'label' => '地址', // 標籤 3
+                                                        'data' => 'type=address' // 連結網址
                                                     )
                                                 )
                                             ),
@@ -166,13 +171,13 @@ foreach ($client->parseEvents() as $event) {
                                                 'actions' => array(
                                                     array(
                                                         'type' => 'postback', // 類型 (連結)
-                                                        'label' => '送出訂單', // 標籤 3
-                                                        'data' => 'type=submit' // 連結網址
+                                                        'label' => '訂單內容', // 標籤 3
+                                                        'data' => 'type=content' // 連結網址
                                                     ),
                                                     array(
                                                         'type' => 'postback', // 類型 (連結)
-                                                        'label' => '送出訂單', // 標籤 3
-                                                        'data' => 'type=submit' // 連結網址
+                                                        'label' => '備註', // 標籤 3
+                                                        'data' => 'type=note' // 連結網址
                                                     ),
                                                     array(
                                                         'type' => 'postback', // 類型 (連結)

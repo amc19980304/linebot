@@ -146,30 +146,10 @@ foreach ($client->parseEvents() as $event) {
                                         'text' => '請點擊以下欄位以便輸入資料', // 文字
                                         'actions' => array(
                                             array(
-                                                'type' => 'postback', // 類型 (回傳)
-                                                'label' => '姓名', // 標籤 1
-                                                'data' => 'action=buy&itemid=123' // 資料
-                                            ),
-                                            array(
-                                                'type' => 'postback', // 類型 (回傳)
-                                                'label' => '電話', // 標籤 1
-                                                'data' => 'action=buy&itemid=123' // 資料
-                                            ),
-                                            array(
-                                                'type' => 'postback', // 類型 (回傳)
-                                                'label' => '地址', // 標籤 1
-                                                'data' => 'action=buy&itemid=123' // 資料
-                                            ),
-                                            array(
-                                                'type' => 'postback', // 類型 (回傳)
-                                                'label' => '訂餐內容', // 標籤 1
-                                                'data' => 'action=buy&itemid=123' // 資料
-                                            ),
-                                            array(
-                                                'type' => 'postback', // 類型 (回傳)
-                                                'label' => '送出訂單', // 標籤 1
-                                                'data' => 'action=buy&itemid=123' // 資料
-                                            )
+                            'type' => 'postback', // 類型 (回傳)
+                            'label' => 'Postback example', // 標籤 1
+                            'data' => 'action=buy&itemid=123' // 資料
+                        )
                                         )
                                     )
                                 )

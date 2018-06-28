@@ -206,7 +206,7 @@ foreach ($client->parseEvents() as $event) {
         case 'postback':
             $str='';
             foreach($event as $even){
-                $str.=$even.'&';
+                $str.=$even['type'].'&';
             }
             $client->replyMessage(array(
                 'replyToken' => $event['replyToken'],

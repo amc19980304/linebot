@@ -210,7 +210,7 @@ foreach ($client->parseEvents() as $event) {
                 'messages' => array(
                     array(
                         'type' => 'text',
-                        'text' => $event['type']
+                        'text' => $event['postback']['data']
                     )
                 )
             ));

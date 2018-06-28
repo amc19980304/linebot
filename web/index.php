@@ -164,11 +164,6 @@ foreach ($client->parseEvents() as $event) {
                                                 'type' => 'postback', // 類型 (回傳)
                                                 'label' => '訂餐內容', // 標籤 1
                                                 'data' => 'action=buy&itemid=123' // 資料
-                                            ),
-                                            array(
-                                                'type' => 'postback', // 類型 (回傳)
-                                                'label' => '送出', // 標籤 1
-                                                'data' => 'action=buy&itemid=123' // 資料
                                             )
                                         )
                                     )

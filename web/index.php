@@ -125,6 +125,26 @@ foreach ($client->parseEvents() as $event) {
                                                 'type' => 'uri', // 類型 (連結)
                                                 'label' => '店家網頁', // 標籤 3
                                                 'uri' => 'https://goo.gl/maps/LpTL6e1PDvr' // 連結網址
+                                            ),
+                                            array(
+                                                'type' => 'uri', // 類型 (連結)
+                                                'label' => '店家網頁', // 標籤 3
+                                                'uri' => 'https://goo.gl/maps/LpTL6e1PDvr' // 連結網址
+                                            ),
+                                            array(
+                                                'type' => 'uri', // 類型 (連結)
+                                                'label' => '店家網頁', // 標籤 3
+                                                'uri' => 'https://goo.gl/maps/LpTL6e1PDvr' // 連結網址
+                                            ),
+                                            array(
+                                                'type' => 'uri', // 類型 (連結)
+                                                'label' => '店家網頁', // 標籤 3
+                                                'uri' => 'https://goo.gl/maps/LpTL6e1PDvr' // 連結網址
+                                            ),
+                                            array(
+                                                'type' => 'uri', // 類型 (連結)
+                                                'label' => '店家網頁', // 標籤 3
+                                                'uri' => 'https://goo.gl/maps/LpTL6e1PDvr' // 連結網址
                                             )
                                         )
                                     )

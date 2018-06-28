@@ -4,16 +4,6 @@ $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 foreach ($client->parseEvents() as $event) {
-        $client->replyMessage(array(
-        'replyToken' => $event['replyToken'],
-        'messages' => array(
-            array(
-                'type' => 'text',
-                'text' => $event['postback']['type']
-            )
-        )
-    ));
-
     switch ($event['type']) {
         case 'message':
             $message = $event['message'];
@@ -210,7 +200,19 @@ foreach ($client->parseEvents() as $event) {
                         )
                     ));
                     break;
+                
             }
+            break;
+        case 'postback':
+            $client->replyMessage(array(
+                'replyToken' => $event['replyToken'],
+                'messages' => array(
+                    array(
+                        'type' => 'text',
+                        'text' => $event['type']
+                    )
+                )
+            ));
             break;
         default:
             error_log("Unsupporeted event type: " . $event['type']);
